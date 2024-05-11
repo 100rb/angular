@@ -1,0 +1,23 @@
+<h2>pipe-component works!</h2>
+
+<p>To check pure/impure pipe</p>
+
+<input type="text" [(ngModel)]="nameString" class="form-control col-md-4">
+<button class="btn btn-success" (click)="fnAddUser()">Add user</button>
+<button class="btn btn-success">Test btn</button>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Salary</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of userList | search : nameString">
+            <td>{{user.name}}</td>
+            <td>{{user.age}}</td>
+            <td>{{user.salary}}</td>
+        </tr>
+    </tbody>
+</table>
